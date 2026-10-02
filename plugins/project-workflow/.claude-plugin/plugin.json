@@ -1,9 +1,16 @@
 {
   "name": "project-workflow",
-  "version": "0.1.0",
-  "description": "Consistent project-tracking artifacts, starting with well-structured Jira issues.",
+  "version": "0.2.0",
+  "description": "Consistent project setup and tracking: org-standards repo checks and well-structured Jira issues.",
   "author": {
     "name": "tkforgeworks"
   },
-  "keywords": ["jira", "issues", "planning", "workflow"]
+  "keywords": [
+    "jira",
+    "issues",
+    "planning",
+    "workflow",
+    "org-standards",
+    "repo-setup"
+  ]
 }
