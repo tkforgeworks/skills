@@ -44,22 +44,34 @@ claude plugin eval plugins/<plugin-name>
 claude plugin tag plugins/<plugin-name>
 ```
 
-Test local changes before pushing by adding the working copy as a marketplace:
+## Installing
+
+The primary install path is through the claude.ai account, so skills reach Chat, Cowork, and Claude Code together:
+
+1. In the desktop app or claude.ai: **Customize → Plugins → Add marketplace**, enter `tkforgeworks/skills`.
+2. Install each plugin from that marketplace (adding the marketplace alone installs nothing).
+3. Claude Code picks them up as `<plugin-name>@synced` on its next account sync (a new session triggers one). Skills are referenced as `<plugin-name>:<skill-name>`, e.g. `project-workflow:jira-issue-writer`.
+
+Pushed changes reach installs via the marketplace sync in Customize, not automatically per commit.
+
+Claude Code-only install (no claude.ai account sync):
+
+```bash
+claude plugin marketplace add tkforgeworks/skills
+claude plugin install <plugin-name>@tkforgeworks   # "tkforgeworks" = name in marketplace.json
+```
+
+## Testing local changes before pushing
+
+A plugin installed from a local marketplace takes precedence over a same-named `@synced` copy, so the working tree can be tested without touching the account install:
 
 ```bash
 claude plugin marketplace add /path/to/this/repo
-claude plugin install <plugin-name>@tkforgeworks   # "tkforgeworks" = name in marketplace.json
-claude plugin marketplace update tkforgeworks      # pick up later edits
-```
-
-## Installing on a fresh Claude Code installation
-
-```bash
-claude plugin marketplace add <git-url-or-owner/repo>
 claude plugin install <plugin-name>@tkforgeworks
+claude plugin marketplace update tkforgeworks      # pick up later edits
+# when done, revert to the synced copy:
+claude plugin uninstall <plugin-name>@tkforgeworks && claude plugin marketplace remove tkforgeworks
 ```
-
-Consumers get changes with `claude plugin marketplace update` followed by `claude plugin update <plugin-name>`.
 
 ## Change workflow
 
