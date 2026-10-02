@@ -1,0 +1,9 @@
+{
+  "name": "project-workflow",
+  "version": "0.1.0",
+  "description": "Consistent project-tracking artifacts, starting with well-structured Jira issues.",
+  "author": {
+    "name": "tkforgeworks"
+  },
+  "keywords": ["jira", "issues", "planning", "workflow"]
+}

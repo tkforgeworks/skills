@@ -1,0 +1,23 @@
+{
+  "name": "tkforgeworks",
+  "owner": {
+    "name": "tkforgeworks"
+  },
+  "metadata": {
+    "description": "Shared Claude skills: code and infrastructure review standards, project workflow."
+  },
+  "plugins": [
+    {
+      "name": "code-standards",
+      "source": "./plugins/code-standards",
+      "description": "Structured review skills for Java/Spring Boot code and infrastructure (Kubernetes, Docker, IaC, CI/CD).",
+      "version": "0.1.0"
+    },
+    {
+      "name": "project-workflow",
+      "source": "./plugins/project-workflow",
+      "description": "Consistent project-tracking artifacts, starting with well-structured Jira issues.",
+      "version": "0.1.0"
+    }
+  ]
+}

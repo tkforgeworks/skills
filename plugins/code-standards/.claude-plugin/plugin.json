@@ -1,0 +1,9 @@
+{
+  "name": "code-standards",
+  "version": "0.1.0",
+  "description": "Structured review skills for Java/Spring Boot code and infrastructure (Kubernetes, Docker, IaC, CI/CD).",
+  "author": {
+    "name": "tkforgeworks"
+  },
+  "keywords": ["code-review", "java", "spring-boot", "infrastructure", "kubernetes", "standards"]
+}
