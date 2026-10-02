@@ -1,7 +1,7 @@
 {
   "name": "project-workflow",
-  "version": "0.2.0",
-  "description": "Consistent project setup and tracking: org-standards repo checks and well-structured Jira issues.",
+  "version": "0.3.0",
+  "description": "Consistent project setup and tracking: org-standards repo checks, ticket start/finish flow, and well-structured Jira issues.",
   "author": {
     "name": "tkforgeworks"
   },
@@ -11,6 +11,8 @@
     "planning",
     "workflow",
     "org-standards",
-    "repo-setup"
+    "repo-setup",
+    "tickets",
+    "branching"
   ]
 }
