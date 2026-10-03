@@ -4,7 +4,7 @@
     "name": "tkforgeworks"
   },
   "metadata": {
-    "description": "Shared Claude skills: code and infrastructure review standards, project workflow."
+    "description": "Shared Claude skills: code and infrastructure review standards, project workflow, and Claude Code UI mods."
   },
   "plugins": [
     {
@@ -18,6 +18,12 @@
       "source": "./plugins/project-workflow",
       "description": "Consistent project setup and tracking: org-standards repo checks, ticket start/finish flow, and well-structured Jira issues.",
       "version": "0.3.0"
+    },
+    {
+      "name": "context-usage",
+      "source": "./plugins/context-usage",
+      "description": "Claude Code only: shows context window usage as a colour-coded horizontal stacked bar above the prompt. Toggle with /context-usage [on|off].",
+      "version": "0.1.0"
     }
   ]
 }

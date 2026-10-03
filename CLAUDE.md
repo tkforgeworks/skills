@@ -23,6 +23,7 @@ plugins/<plugin-name>/
 - The `name` in `plugin.json`, the marketplace entry, and the directory name must agree.
 - Skill names must not collide with Claude Code built-ins (e.g. `code-review`, `simplify`, `security-review`); prefer specific names like `java-review`.
 - `SKILL.md` frontmatter needs `name` and `description`. The `description` is what decides whether the skill triggers, so state concretely *when* to use it (trigger phrases, file types, task shapes). Keep the body focused; move long reference material into sibling files that the skill tells Claude to read when needed.
+- Function-hook plugins (UI mods like `context-usage`: `hooks/hooks.json` listing `"modules"`, a `register.tsx`, `types/index.d.ts`, `tests/*.test.ts`) only run in Claude Code, not Chat or Cowork. Run `claude plugin test plugins/<name>` for them. The `.claude-plugin/types/` folder and `tsconfig.json` that Claude Code writes when it loads one locally are gitignored.
 - Personal skills (tied to one person's accounts, watchlists, home setup, etc.) stay out of this repo. Skills here must not hard-code personal details (emails, local paths, private account IDs). Put per-user or per-org values in plugin options or clearly marked config sections.
 
 ## Commands

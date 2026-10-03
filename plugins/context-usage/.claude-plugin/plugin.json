@@ -1,0 +1,16 @@
+{
+  "name": "context-usage",
+  "version": "0.1.0",
+  "description": "Claude Code only: shows context window usage as a colour-coded horizontal stacked bar above the prompt. Toggle with /context-usage [on|off].",
+  "author": {
+    "name": "tkforgeworks"
+  },
+  "keywords": [
+    "context",
+    "tokens",
+    "usage",
+    "status",
+    "ui"
+  ],
+  "types": "./types/index.d.ts"
+}
