@@ -22,6 +22,12 @@ Run the telemetry module in normal daily use and confirm it is complete, correct
 - [ ] Volume check: events and bytes per active day recorded here, and acceptable
 - [ ] Loss check: hot reload or crash loses at most one flush interval; confirmed acceptable
 - [ ] `/cog-telemetry` output reviewed and useful (summary, `recent`, `path`, `flush`)
+- [ ] MCP tool names resolved. Claude Code's telemetry reports every MCP call as `tool_name: "mcp_tool"`, so the server and tool are lost.
+  - Hook `tool.call`, which sees the real `mcp__<server>__<tool>` name, and record `tool_use_id → name`.
+  - Enrich `tool.decision`/`tool.result` with `mcp_server` and `mcp_tool` before they are written.
+  - Make `/cog-telemetry` group by the real name.
+  - Add a test, and document the new fields in `docs/telemetry-format.md`.
+  - This must land before format v1 is frozen.
 - [ ] Format v1 frozen. Any later change bumps `v` and documents a migration
 - [ ] Plugin version bumped to `1.0.0` with the findings above noted in this file
 
