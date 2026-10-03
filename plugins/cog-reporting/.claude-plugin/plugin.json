@@ -1,0 +1,31 @@
+{
+  "name": "cog-reporting",
+  "version": "0.1.0",
+  "description": "Claude Code only: reporting for COG (Claude Observability GUI). Telemetry module records per-request, per-tool, per-turn and per-subagent data as JSONL for COG to ingest; /cog-telemetry shows what has been collected.",
+  "author": {
+    "name": "tkforgeworks"
+  },
+  "keywords": [
+    "observability",
+    "telemetry",
+    "cog",
+    "usage",
+    "cost",
+    "reporting"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "outputDir": {
+      "type": "string",
+      "title": "Output directory",
+      "description": "Where event files are written. Empty uses <Claude config dir>/cog (~/.claude/cog).",
+      "default": ""
+    },
+    "flushSeconds": {
+      "type": "number",
+      "title": "Flush interval (seconds)",
+      "description": "How often queued events are written to a new file.",
+      "default": 5
+    }
+  }
+}
