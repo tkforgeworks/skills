@@ -1,0 +1,3 @@
+# Written by Claude Code when a function-hook plugin loads from a local folder
+plugins/*/.claude-plugin/types/
+plugins/*/tsconfig.json
