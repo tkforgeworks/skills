@@ -4,7 +4,7 @@
     "name": "tkforgeworks"
   },
   "metadata": {
-    "description": "Shared Claude skills: code and infrastructure review standards, project workflow, and Claude Code plugins (UI mods, COG reporting)."
+    "description": "Shared Claude skills: code and infrastructure review standards, project workflow, delegation/orchestration, and Claude Code plugins (UI mods, COG reporting)."
   },
   "plugins": [
     {
@@ -29,6 +29,12 @@
       "name": "cog-reporting",
       "source": "./plugins/cog-reporting",
       "description": "Claude Code only: reporting for COG (Claude Observability GUI). Telemetry module records per-request, per-tool, per-turn and per-subagent data as JSONL for COG to ingest; /cog-telemetry shows what has been collected.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "orchestration",
+      "source": "./plugins/orchestration",
+      "description": "Main thread plans, dispatches and reviews; tiered subagents (haiku/sonnet/opus) do briefed chunks of work tracked in a ledger. Subagents never commit or write to Jira; a guard hook enforces it in Claude Code.",
       "version": "0.1.0"
     }
   ]

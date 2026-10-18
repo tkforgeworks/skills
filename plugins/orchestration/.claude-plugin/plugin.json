@@ -1,0 +1,17 @@
+{
+  "name": "orchestration",
+  "version": "0.1.0",
+  "description": "Keeps the main conversation as the planner and reviewer: splits work into briefed chunks, dispatches each to a subagent sized to its difficulty, tracks dispatches in a ledger, reviews every return, and learns from each run. Subagents never commit or write to Jira.",
+  "author": {
+    "name": "tkforgeworks"
+  },
+  "keywords": [
+    "orchestration",
+    "delegation",
+    "subagents",
+    "multi-agent",
+    "model-routing",
+    "ledger",
+    "token-efficiency"
+  ]
+}
